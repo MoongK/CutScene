@@ -8,6 +8,7 @@ public class SimplePlayController : MonoBehaviour {
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
 
-        transform.position += new Vector3(x, 0f, y) * 3f * Time.deltaTime;
+        transform.position += new Vector3(x, 0f, y).normalized * 3f * Time.deltaTime;
+
 	}
 }

@@ -13,17 +13,14 @@ public class TimelineControll : MonoBehaviour {
     {
         if (pd.state == PlayState.Playing)
         {
-            eventCam.enabled = true;
-            playCam.enabled = false;
+            playCam.gameObject.SetActive(false);
             player.GetComponent<SimplePlayController>().enabled = false;
-            print("event");
         }
         else
         {
-            playCam.enabled = true;
-            eventCam.enabled = false;
+            eventCam.gameObject.SetActive(false);
+            playCam.gameObject.SetActive(true);
             player.GetComponent<SimplePlayController>().enabled = true;
-            print("play");
         }
     }
 }
